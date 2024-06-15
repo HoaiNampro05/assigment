@@ -30,5 +30,5 @@ where log.id = danhsachde.id
 group by log.newtimestamp,log.id,danhsachde.name,log.activity
 order by log.newtimestamp,log.id,danhsachde.name,log.activity
 """)
-output_path = "hdfs:///raw_zone/fact/activity/output.csv"
+output_path = "hdfs:///raw_zone/fact/activity/output"
 result.write.mode("overwrite").csv(output_path)
